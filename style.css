@@ -1,42 +1,422 @@
-body{
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #AE91BF;
+    color: #3B3240;
+    font-family: "Expletus Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   NAVBAR BOOTSTRAP
+========================================= */
+
+.navbar {
+    background-color: #3B3240 !important;
+    border-bottom: 5px solid #656B49;
+    padding: 15px 25px;
+}
+
+.navbar-brand {
+    color: #B7BF91 !important;
+    font-family: "Gravitas One", serif;
+    font-size: 25px;
+}
+
+.navbar .nav-link {
+    color: #B7BF91 !important;
+    font-family: "Atma", cursive;
+    font-size: 19px;
+    margin: 0 8px;
+    transition: 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #AE91BF !important;
+    transform: translateY(-2px);
+}
+
+.navbar .nav-link.active {
+    color: #AE91BF !important;
+}
+
+.navbar-text {
+    color: #766580 !important;
+    font-family: "Atma", cursive;
+    font-size: 17px;
+}
+
+
+/* BOTÃO DO MENU MOBILE */
+
+.navbar-toggler {
+    background-color: #B7BF91;
+    border: 2px solid #656B49;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px #766580;
+}
+
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+main.center {
+    width: 92%;
+    max-width: 1250px;
+    margin: 45px auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   ÁREA DAS FOFOCAS
+========================================= */
+
+.conteudo-centro {
+    width: 100%;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-
+    gap: 25px;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
 
-    width: 80%;
-    height: 80%;
+/* =========================================
+   CARDS BOOTSTRAP DE FOFOCA
+========================================= */
 
-    background-color: #f1f1f1;
-    border-radius: 10px;
+.conteudo-centro .card {
+    width: 100% !important;
+    max-width: none !important;
+
+    overflow: hidden;
+
+    background-color: #766580;
+    border: none;
+    border-radius: 20px;
+
+    box-shadow: 8px 8px 0 #3B3240;
+
+    transition: 0.3s ease;
 }
 
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.conteudo-centro .card:hover {
+    transform: translateY(-5px);
+}
 
-    width: 80%;
+
+/* IMAGEM */
+
+.conteudo-centro .card img {
+    width: 100%;
     height: 100%;
-
+    min-height: 190px;
+    object-fit: cover;
 }
 
 
+/* CORPO DO CARD */
+
+.conteudo-centro .card-body {
+    padding: 25px;
 }
-.direita{
+
+.conteudo-centro .card-title {
+    color: #B7BF91;
+    font-family: "Gravitas One", serif;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.conteudo-centro .card-text {
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.conteudo-centro .text-body-secondary {
+    color: #B7BF91 !important;
+}
 
 
+/* =========================================
+   LADO DIREITO / PERFIL
+========================================= */
+
+main.center > .direita {
+    width: 100%;
+    background-color: #656B49;
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 8px 8px 0 #3B3240;
+}
+
+
+/* =========================================
+   USUÁRIO
+========================================= */
+
+.user {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #B7BF91;
+}
+
+.user img {
+    display: block;
+
+    width: 100px;
+    height: 100px;
+
+    margin: 0 auto 12px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 5px solid #B7BF91;
+}
+
+.user p {
+    color: #B7BF91;
+    font-family: "Atma", cursive;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DESCRIÇÃO
+========================================= */
+
+.descricao {
+    padding: 20px 0;
+}
+
+.descricao p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* =========================================
+   TOP FOFOCAS
+========================================= */
+
+.top-fofocas {
+    margin-top: 10px;
+}
+
+.top-fofocas > p {
+    color: #B7BF91;
+    font-family: "Gravitas One", serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   LISTA DE FOFOCAS
+========================================= */
+
+.top-fofocas .card {
+    width: 100% !important;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.top-fofocas .list-group-item {
+    background-color: #766580;
+    color: white;
+
+    border-color: #B7BF91;
+
+    padding: 15px;
+
+    font-family: "Expletus Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+
+    transition: 0.3s ease;
+}
+
+.top-fofocas .list-group-item:hover {
+    background-color: #AE91BF;
+    color: #3B3240;
+}
+
+
+/* =========================================
+   BOTÃO PARA VOLTAR
+========================================= */
+
+a.ir-para-pagina {
+    text-decoration: none;
+}
+
+a.ir-para-pagina img {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    padding: 10px;
+
+    object-fit: contain;
+
+    background-color: #3B3240;
+
+    border: 3px solid #B7BF91;
+    border-radius: 50%;
+
+    transition: 0.3s ease;
+
+    z-index: 1000;
+}
+
+a.ir-para-pagina img:hover {
+    background-color: #656B49;
+    transform: rotate(10deg) scale(1.1);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    main.center {
+        grid-template-columns: minmax(0, 1fr) 240px;
+        gap: 25px;
+    }
+
+    main.center > .direita {
+        padding: 20px;
+    }
+
+    .conteudo-centro .card-body {
+        padding: 20px;
+    }
+
+    .conteudo-centro .card-title {
+        font-size: 22px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 750px) {
+
+    main.center {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 30px auto;
+    }
+
+    main.center > .direita {
+        width: 100%;
+    }
+
+    .conteudo-centro .card {
+        box-shadow: 6px 6px 0 #3B3240;
+    }
+
+    .conteudo-centro .card img {
+        min-height: 220px;
+        max-height: 280px;
+    }
+
+    .user img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .navbar-brand {
+        font-size: 21px;
+    }
+
+    .navbar .nav-link {
+        font-size: 17px;
+    }
+
+    .navbar-text {
+        display: none;
+    }
+
+    main.center {
+        width: 88%;
+        margin: 25px auto;
+    }
+
+    .conteudo-centro .card-body {
+        padding: 18px;
+    }
+
+    .conteudo-centro .card-title {
+        font-size: 20px;
+    }
+
+    .conteudo-centro .card-text {
+        font-size: 14px;
+    }
+
+    .conteudo-centro .card img {
+        min-height: 180px;
+    }
+
+    main.center > .direita {
+        padding: 20px;
+    }
+
+    a.ir-para-pagina img {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+    }
 }

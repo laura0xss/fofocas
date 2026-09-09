@@ -1,0 +1,414 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #AE91BF;
+    color: #3B3240;
+    font-family: "Expletus Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.nav {
+    width: 100%;
+    background-color: #3B3240;
+    padding: 18px 10px;
+    list-style: none;
+    border-bottom: 5px solid #656B49;
+}
+
+.nav-item {
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: #B7BF91 !important;
+    font-family: "Atma", cursive;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0 15px;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #AE91BF !important;
+    transform: translateY(-3px);
+}
+
+.nav-link.active {
+    color: #AE91BF !important;
+}
+
+.nav-link.disabled {
+    color: #766580 !important;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+    width: 92%;
+    max-width: 1250px;
+    margin: 45px auto;
+    padding: 0;
+}
+
+.conteudo-centro {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) 220px;
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* =========================================
+   LADO ESQUERDO
+========================================= */
+
+.esquerda {
+    width: 100%;
+    background-color: #766580;
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 8px 8px 0 #3B3240;
+}
+
+.esquerda h2 {
+    color: #B7BF91;
+    font-family: "Gravitas One", serif;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.esquerda p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   CENTRO
+========================================= */
+
+.center {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* =========================================
+   APRESENTAÇÃO
+========================================= */
+
+section.inicio {
+    width: 100%;
+    background-color: #B7BF91;
+    padding: 50px 35px;
+    border: 5px solid #656B49;
+    border-radius: 25px;
+    box-shadow: 10px 10px 0 #3B3240;
+    text-align: center;
+}
+
+section.inicio h1 {
+    color: #3B3240;
+    font-family: "Gravitas One", serif;
+    font-size: clamp(27px, 4vw, 42px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+section.inicio p {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: #3B3240;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BOTÃO VER FOFOCAS
+========================================= */
+
+section.inicio button {
+    border: none;
+    background-color: #3B3240;
+    color: #B7BF91;
+    padding: 13px 32px;
+    border-radius: 30px;
+    font-family: "Atma", cursive;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+section.inicio button:hover {
+    background-color: #656B49;
+    color: #AE91BF;
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   DESTAQUES
+========================================= */
+
+.destaques {
+    width: 100%;
+    margin-top: 45px;
+}
+
+.destaques h2 {
+    color: #3B3240;
+    font-family: "Gravitas One", serif;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.noticias {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* =========================================
+   CARDS DE NOTÍCIA
+========================================= */
+
+.noticia {
+    overflow: hidden;
+    background-color: #766580;
+    padding: 18px;
+    border-radius: 20px;
+    box-shadow: 7px 7px 0 #3B3240;
+    transition: 0.3s ease;
+}
+
+.noticia:hover {
+    transform: translateY(-6px);
+}
+
+.noticia img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 4px solid #B7BF91;
+}
+
+.noticia h3 {
+    color: #B7BF91;
+    font-family: "Atma", cursive;
+    font-size: 25px;
+    margin: 15px 0 8px;
+}
+
+.noticia p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   LADO DIREITO
+========================================= */
+
+.direita {
+    width: 100%;
+    background-color: #656B49;
+    padding: 25px;
+    border-radius: 22px;
+    box-shadow: 8px 8px 0 #3B3240;
+}
+
+.direita h2 {
+    color: #B7BF91;
+    font-family: "Gravitas One", serif;
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.direita p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   ÍCONE
+========================================= */
+
+a.inicio {
+    text-decoration: none;
+}
+
+a.inicio img {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    object-fit: contain;
+
+    padding: 10px;
+
+    background-color: #3B3240;
+    border: 3px solid #B7BF91;
+    border-radius: 50%;
+
+    transition: 0.3s ease;
+
+    z-index: 1000;
+}
+
+a.inicio img:hover {
+    background-color: #656B49;
+    transform: rotate(-10deg) scale(1.1);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .conteudo-centro {
+        grid-template-columns: 180px minmax(0, 1fr) 180px;
+        gap: 20px;
+    }
+
+    .esquerda,
+    .direita {
+        padding: 20px;
+    }
+
+    .esquerda h2,
+    .direita h2 {
+        font-size: 18px;
+    }
+
+    .esquerda p,
+    .direita p {
+        font-size: 14px;
+    }
+
+    section.inicio {
+        padding: 40px 25px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 750px) {
+
+    .nav {
+        padding: 15px 5px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        margin: 0 7px;
+    }
+
+    .conteudo-centro {
+        grid-template-columns: 1fr;
+    }
+
+    .esquerda,
+    .direita {
+        width: 100%;
+        min-height: auto;
+    }
+
+    section.inicio {
+        order: 1;
+    }
+
+    .noticias {
+        grid-template-columns: 1fr;
+    }
+
+    .noticia img {
+        height: 220px;
+    }
+}
+
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        margin: 0 4px;
+    }
+
+    section.inicio {
+        padding: 30px 18px;
+    }
+
+    section.inicio h1 {
+        font-size: 26px;
+    }
+
+    section.inicio p {
+        font-size: 16px;
+    }
+
+    .destaques h2 {
+        font-size: 25px;
+    }
+
+    .noticia img {
+        height: 180px;
+    }
+
+    a.inicio img {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
