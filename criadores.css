@@ -1,0 +1,325 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #AE91BF;
+    color: #3B3240;
+    font-family: "Expletus Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background-color: #3B3240 !important;
+    border-bottom: 5px solid #656B49;
+    padding: 15px 25px;
+}
+
+.navbar-brand {
+    color: #B7BF91 !important;
+    font-family: "Gravitas One", serif;
+    font-size: 25px;
+}
+
+.navbar .nav-link {
+    color: #B7BF91 !important;
+    font-family: "Atma", cursive;
+    font-size: 19px;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #AE91BF !important;
+    transform: translateY(-2px);
+}
+
+.navbar .nav-link.active {
+    color: #AE91BF !important;
+}
+
+.navbar-text {
+    color: #766580 !important;
+    font-family: "Atma", cursive;
+    font-size: 17px;
+}
+
+.navbar-toggler {
+    background-color: #B7BF91;
+    border: 2px solid #656B49;
+}
+
+
+/* =========================================
+   PÁGINA
+========================================= */
+
+.pagina-criadores {
+    width: 92%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.titulo {
+    text-align: center;
+    background-color: #B7BF91;
+    border: 5px solid #656B49;
+    border-radius: 25px;
+    padding: 40px 25px;
+    box-shadow: 9px 9px 0 #3B3240;
+    margin-bottom: 45px;
+}
+
+.titulo h1 {
+    color: #3B3240;
+    font-family: "Gravitas One", serif;
+    font-size: clamp(28px, 5vw, 42px);
+    margin-bottom: 15px;
+}
+
+.titulo p {
+    color: #3B3240;
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CRIADORES
+========================================= */
+
+.criadores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================================
+   CARD DO CRIADOR
+========================================= */
+
+.criador {
+    background-color: #766580;
+    border-radius: 22px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 8px 8px 0 #3B3240;
+    transition: 0.3s ease;
+}
+
+.criador:hover {
+    transform: translateY(-7px);
+}
+
+
+/* =========================================
+   FOTO
+========================================= */
+
+.foto-criador {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+}
+
+.foto-criador img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 5px solid #B7BF91;
+}
+
+
+/* =========================================
+   INFORMAÇÕES
+========================================= */
+
+.info-criador h2 {
+    color: #B7BF91;
+    font-family: "Atma", cursive;
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.info-criador h3 {
+    color: #AE91BF;
+    font-family: "Offside", sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.info-criador p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SOBRE O SITE
+========================================= */
+
+.sobre-site {
+    margin-top: 45px;
+    padding: 35px;
+    background-color: #656B49;
+    border-radius: 22px;
+    box-shadow: 8px 8px 0 #3B3240;
+    text-align: center;
+}
+
+.sobre-site h2 {
+    color: #B7BF91;
+    font-family: "Gravitas One", serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.sobre-site p {
+    max-width: 750px;
+    margin: auto;
+    color: white;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BOTÃO VOLTAR
+========================================= */
+
+.voltar img {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 58px;
+    height: 58px;
+
+    padding: 10px;
+
+    background-color: #3B3240;
+    border: 3px solid #B7BF91;
+    border-radius: 50%;
+
+    object-fit: contain;
+
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.voltar img:hover {
+    background-color: #656B49;
+    transform: scale(1.1) rotate(-10deg);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .criadores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .navbar-text {
+        display: none;
+    }
+
+    .pagina-criadores {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .criadores {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo {
+        padding: 30px 20px;
+    }
+
+    .titulo h1 {
+        font-size: 28px;
+    }
+
+    .titulo p {
+        font-size: 16px;
+    }
+
+    .criador {
+        padding: 25px 20px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR PEQUENO
+========================================= */
+
+@media (max-width: 400px) {
+
+    .navbar-brand {
+        font-size: 21px;
+    }
+
+    .foto-criador {
+        width: 125px;
+        height: 125px;
+    }
+
+    .info-criador h2 {
+        font-size: 24px;
+    }
+
+    .sobre-site {
+        padding: 25px 18px;
+    }
+
+    .voltar img {
+        width: 50px;
+        height: 50px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+}
